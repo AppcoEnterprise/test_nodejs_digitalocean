@@ -2,6 +2,9 @@ const express = require("express");
 
 const app = express();
 
+// Initialize DB
+require('./initDB')();
+
 app.get("/", (req, res) => {
   return res.status(200).json({
     status: 200,

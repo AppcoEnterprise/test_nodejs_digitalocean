@@ -38,6 +38,10 @@ services:
     networks:
       - app-network
 
+# still have data even shut down the container
+volumes: 
+  mongo_db: {}
+  
 networks:
   app-network:
     driver: bridge

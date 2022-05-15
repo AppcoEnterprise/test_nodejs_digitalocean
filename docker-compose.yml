@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.9"
 
 services:
   mongo_db: 
@@ -41,7 +41,7 @@ services:
 # still have data even shut down the container
 volumes: 
   mongo_db: {}
-  
+
 networks:
   app-network:
     driver: bridge

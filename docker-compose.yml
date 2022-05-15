@@ -5,7 +5,7 @@ services:
   mongo_db: 
     container_name: db_container
     image: mongo:latest
-    restart: always
+    restart: unless-stopped
     ports: 
       - 2717:27017
     volumes: 
@@ -16,6 +16,7 @@ services:
     build: .
     ports: 
       - 4000:3000
+    restart: unless-stopped
     volumes: 
       - .:/usr/src/app #match between container and nodejs
     environment: 
